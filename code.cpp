@@ -1,5 +1,24 @@
 #include <iostream>
+#include <vector>
+
 using namespace std;
+class Gmail {
+	string name;
+	string gmailn;
+public:
+	Gmail(string userName, string userEmail) {
+		name = userName;
+		gmailn = userEmail;
+	}
+	void displayInfo() {
+		cout << "Name: " << name << endl;
+		cout << "Email: " << gmailn << endl;
+	}
+
+	string getName() {
+		return name;
+	}
+};
 int main() {
 	setlocale(0, "RU");
 	while (true) {
@@ -20,6 +39,23 @@ int main() {
 			cout << "| Выход из программы |" << endl;
 		    cout << "----------------------" << endl << endl << endl;
 			break;
+		}
+		else if (opt == '1') {
+			string name;
+			string gmailname;
+			system("cls");
+			cout << "-------------------------" << endl;
+			cout << "     Создание почты" << endl;
+			cout << "-------------------------" << endl;
+			cout << "Введите имя пользователя: ";
+			cin >> name;
+			cout << endl << "Введите имя почты (без gmail.com): ";
+			cin >> gmailname;
+			vector <Gmail> user;
+			user.push_back(Gmail("test","test"));
+			
+			
+			
 		}
 		else {
 			system("cls");
